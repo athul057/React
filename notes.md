@@ -11,14 +11,14 @@ const mainroot = React.createElement('div', { id: 'mainroot' },
 )
 
 this is same as 
-...html
+```html
 <div id="mainroot">
  <div id="child">
   <h1>I am H1</h1>
   <h2>I am H2</h2>
  </div>
 </div>
-...
+
 
 In order to make the 2 chlde elements we have to use the bracket...
 
