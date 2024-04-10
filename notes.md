@@ -12,12 +12,12 @@ const mainroot = React.createElement('div', { id: 'mainroot' },
 
 this is same as 
 
-<!-- <div id="mainroot">
+<div id="mainroot">
  <div id="child">
   <h1>I am H1</h1>
   <h2>I am H2</h2>
  </div>
-</div> -->
+</div>
 
 In order to make the 2 chlde elements we have to use the bracket...
 
@@ -38,3 +38,15 @@ main.render(mainroot);
 
 We can use this this create the main element in react.
 ***************************************************
+
+
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+<foreignObject width="100" height="100">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+        <ul>
+            <li>text</li>
+        </ul>
+        <!-- Other embed HTML element/text into SVG -->
+    </div>
+</foreignObject>
+</svg>
