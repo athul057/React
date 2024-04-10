@@ -1,4 +1,6 @@
 ************************************************************************************************************************************
+
+```javascript
 const mainroot = React.createElement('div', { id: 'mainroot' },
 
 
@@ -9,6 +11,7 @@ const mainroot = React.createElement('div', { id: 'mainroot' },
 
  )
 )
+```
 
 this is same as 
 ```html
@@ -18,13 +21,14 @@ this is same as
   <h2>I am H2</h2>
  </div>
 </div>
+```
 
 
 In order to make the 2 chlde elements we have to use the bracket...
 
 When we do above code react will create an object of the above code. inorder to make it into an HTML element we have to  use the following code
 
-
+```javascript
 const main = ReactDOM.createRoot(document.getElementById('root'));
 main.render(mainroot);
 Now the above code will bocmes into an html element.
