@@ -1,7 +1,5 @@
 ************************************************************************************************************************************
-# REACT    ![Static Badge](https://shields.io./badge/fff)
-
-
+# REACT   https://shields.io./badge/react-c
 
 
 
@@ -65,7 +63,7 @@ Now the above code will bocmes into an html element.
 </html>
 ```
 
-To sync it with react we have to first create the 'root' element by using the following command.
+To Sync it with react we have to first create the 'root' element by using the following command.
 
 
 ```javascript
