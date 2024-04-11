@@ -78,6 +78,11 @@ main.render(mainroot);
 
 ***************************************************
 
+npm---> collection of dependencies...
+
+Package json is a configuration for our npm
+
+Transitive dependency...
 
 
 
