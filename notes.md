@@ -13,7 +13,7 @@ const mainroot = React.createElement('div', { id: 'mainroot' },
 )
 ```
 
-this is same as 
+The above code is same as 
 ```html
 <div id="mainroot">
  <div id="child">
@@ -37,13 +37,16 @@ Now the above code will bocmes into an html element.
 ************************************************************************************************************************************
 
 
-
 ```javascript
 const main = ReactDOM.createRoot(document.getElementById('root'));
 main.render(mainroot);
 ```
 
 
-We can use this this create the main element in react.
+**We can use this this create the main element in react.**
 ***************************************************
+
+
+
+
 
