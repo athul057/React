@@ -1,5 +1,9 @@
 ************************************************************************************************************************************
-# REACT
+# REACT   https://shields.io./badge/REACT
+
+
+
+
 
 ```javascript
 const mainroot = React.createElement('div', { id: 'mainroot' },
@@ -70,7 +74,7 @@ main.render(mainroot);
 
 
 **We can use this t create the 'root' element in react.**
-[![Badge Text](badge-url)](link-url)
+
 
 ***************************************************
 
