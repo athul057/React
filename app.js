@@ -25,8 +25,8 @@ const mainroot = React.createElement('div', { id: 'mainroot' },
 
 
  React.createElement('div', { id: 'child' },
-  [React.createElement('h1', {}, "I am H1"),
-  React.createElement('h2', {}, "I am H2")]
+  [React.createElement('h1', {}, "I am H12"),
+  React.createElement('h2', {}, "I am H22")]
 
 
  )

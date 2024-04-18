@@ -81,6 +81,7 @@ main.render(mainroot);
 npm---> collection of dependencies...
 
 Package json is a configuration for our npm
+Package-lock.json will contain the exact version of all of our dependecies that is present in our app.
 
 Transitive dependency...
 
