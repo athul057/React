@@ -14,6 +14,9 @@ if we put this as **/node_modules** as in **.gitignore** file this will be ignor
 
 to again install nodemodules **npm install** it will download all the dependencies from the package.json and package-lock.json itself.
 
+This is an example of `inline code`.
+
+
 
 
 
