@@ -1,10 +1,10 @@
 
-**npm init**
+**`npm init`**
 
 To initiate the npm 
 
 
-**npm install -D parcel**
+**`npm install -D parcel`**
 
 To install the parcel .Parcel will basically bundle whole of our code together(HTML,CSS,JS)
 
@@ -25,9 +25,9 @@ run our website using to execute our packets
 
 
 
-**npm install react**
+**`npm install react`**
 
-**npm install react-dom**
+**`npm install react-dom`**
 
 
 
