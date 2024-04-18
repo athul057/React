@@ -21,7 +21,7 @@ to again install nodemodules `npm install` it will download all the dependencies
 
 
 run our website using to execute our packets 
-**npx parcel index.html**
+`**npx parcel index.html**`
 
 
 
