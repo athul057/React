@@ -76,6 +76,29 @@ main.render(mainroot);
 **We can use this t create the 'root' element in react.**
 
 
+
+
+```javascript
+const heading = React.createElement(
+ "h1", {}, "hello from React"
+)
+const para = React.createElement(
+ "h1", {}, "hello from Para"
+)
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+(root.render(heading)).render(para);
+```
+
+
+Through this we can add 
+```html
+ <div id="root">
+ <h1>hello from React</h1>
+ <h1>hello form Para</h1>
+ </div>
+
+```
 ***************************************************
 
 npm---> collection of dependencies...
