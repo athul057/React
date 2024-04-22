@@ -1,3 +1,5 @@
+# Installing npm 
+
 
 **`npm init`**
 
@@ -27,7 +29,7 @@ This parcel will create a local server for us and host our app there
 automatically refreshing our page whenever a change occurs in the code.
 **`HMR`**->Hot Module Replacement
 
-`Parcel`
+### Parcel
 
 - It will automaticlly refreshes our website if any changes happens in our code.It has a File watching algorithm.
 
@@ -56,7 +58,7 @@ automatically refreshing our page whenever a change occurs in the code.
 - Diffrent in dev and production build -->in production build we can remove some unused codes .
 
 
-# To create a production ready application 
+### To create a production ready application 
 **`npx parcel build index.html`**
 
 It will compress and optimize our production ready application.
