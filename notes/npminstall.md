@@ -30,18 +30,31 @@ automatically refreshing our page whenever a change occurs in the code.
 `Parcel`
 
 1.It will automaticlly refreshes our website if any changes happens in our code.It has a File watching algorithm.
+
 2.Image optimization
+
 3.Caching-->Faster builds due to this.
+
 4.It will bundle whole of our files in to the project.
+
 5.Compress our file.
+
 6.Consisten Hashing.
+
 7.Code Splitting
+
 8.Diffrential Bundling --->through this our app will support older version of browser as well as different other browser also(chome, firefox, opera,mobil borwser etc.)
+
 9.Diagonostic towards errors
+
 10.Error handling
+
 11.We can make HTTPs.
+
 12.Tree shaking --->Remove unused code.
+
 13.Diffrent in dev and production build -->in production build we can remove some unused codes .
+
 
 To create a production ready application 
 **`npx parcel build index.html`**
