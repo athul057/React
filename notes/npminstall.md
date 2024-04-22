@@ -62,6 +62,7 @@ automatically refreshing our page whenever a change occurs in the code.
 **`npx parcel build index.html`**
 
 It will compress and optimize our production ready application.
+in package.json remove the "main": "app.js" line from it.Other wilse we will get some error.
 
 
 
