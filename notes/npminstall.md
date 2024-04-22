@@ -56,12 +56,11 @@ automatically refreshing our page whenever a change occurs in the code.
 - Diffrent in dev and production build -->in production build we can remove some unused codes .
 
 
-```
-To create a production ready application 
+# To create a production ready application 
 **`npx parcel build index.html`**
 
 It will compress and optimize our production ready application.
-```
+
 
 
 
