@@ -1,14 +1,19 @@
 # Installing npm 
 
-
+To initiate the npm 
 **`npm init`**
 
-To initiate the npm 
 
+
+
+
+
+To install the parcel .Parcel will basically bundle whole of our code together(HTML,CSS,JS).It will speed up our application.
 
 **`npm install -D parcel`**
 
-To install the parcel .Parcel will basically bundle whole of our code together(HTML,CSS,JS)
+Because of this bundledr our react app will be very fast....
+Parcel's job is to speed up our app,compress our app.
 
 
 if we put this as `/node_modules` as in `.gitignore` file this will be ignored during git hub action time..
@@ -62,8 +67,27 @@ automatically refreshing our page whenever a change occurs in the code.
 **`npx parcel build index.html`**
 
 It will compress and optimize our production ready application.
-in package.json remove the "main": "app.js" line from it.Other wilse we will get some error.
+in package.json remove the "main": "app.js" line from it.Other wilse we will get some error.bcz here we says index.html and in json main is termed as app.js so some conflict occur here.
 
+
+
+
+
+### To add script in the json 
+
+
+```
+"scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+ ```
+
+
+ so now we can start our application by `npm run start`
+
+ we can start our development mode by `npm run dev`
 
 
 
