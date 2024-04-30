@@ -1,0 +1,75 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+
+}
+
+.header {
+ margin: 10px 10px;
+ display: flex;
+ justify-content: space-between;
+ border: 1px solid black;
+}
+
+.logo {
+ width: 100px
+}
+
+.logo>img {
+ width: 100%;
+}
+
+.nav-links {
+ margin-top: 20px;
+}
+
+.list {
+ display: flex;
+ list-style-type: none;
+}
+
+.list>li {
+ margin: 10px;
+ font-size: large;
+ cursor: pointer;
+}
+
+
+/*********************************************************/
+
+/* card */
+
+/*********************************************************/
+
+
+.card {
+ margin: 10px;
+ width: 200px;
+ height: 300px;
+ border: 1px solid black;
+}
+
+.res-img {
+ margin: 5px;
+}
+
+
+.res-img>img {
+
+ width: 100%;
+}
+
+.container {
+ display: flex;
+ justify-content: space-between;
+}
+
+.rating {
+ color: green;
+}
+
+.items {
+ margin-top: 5px;
+ color: grey;
+}
