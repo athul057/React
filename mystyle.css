@@ -46,17 +46,14 @@
 .card {
  margin: 10px;
  width: 200px;
- height: 300px;
+ /* height: 300px; */
  border: 1px solid black;
 }
 
-.res-img {
- margin: 5px;
-}
 
 
 .res-img>img {
-
+ height: 130px;
  width: 100%;
 }
 
@@ -69,9 +66,21 @@
  color: green;
 }
 
+.items-container {
+
+ max-width: 100%;
+ overflow: hidden;
+ overflow-wrap: break-word;
+
+
+}
+
+
 .items {
  margin-top: 5px;
  color: grey;
+
+ white-space: nowrap;
 }
 
 
@@ -87,4 +96,5 @@
 .body {
  display: flex;
  flex-wrap: wrap;
+
 }
