@@ -5,9 +5,10 @@ import Card from './components/Card';
 import Shimmer from './components/Shimmer'
 import { useState } from 'react';
 import { useState } from 'react'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import About from './components/About';
 import Error from './components/Error';
+import Contact from './components/Contact';
 
 
 
@@ -67,7 +68,7 @@ const Applayout = () => {
   return (
     <div className='app'>
       <Header />
-      <Body />
+      <Outlet />
     </div>
   )
 }
@@ -76,12 +77,23 @@ const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <Applayout />,
+    children: [
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />
+      }
+    ],
     errorElement: <Error />,
   },
-  {
-    path: "/about",
-    element: <About />,
-  },
+
 
 ])
 
