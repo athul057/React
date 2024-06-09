@@ -1,10 +1,10 @@
-import rest from '../utils/mock'
+
 import { useState } from 'react';
 
 //CARD
 const Card = (props) => {
  const { rest } = props;
- const [restData, useRestData] = useState(rest)
+
  return (
 
 

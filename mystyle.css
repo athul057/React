@@ -36,6 +36,23 @@
 }
 
 
+.login {
+ padding: 3px 1rem;
+ margin-right: 5px;
+}
+
+/*********************************************************/
+
+/* Other */
+
+/*********************************************************/
+
+.searchInput {
+ width: 40vw;
+ margin: 0 10px;
+}
+
+
 /*********************************************************/
 
 /* card */
@@ -97,4 +114,17 @@
  display: flex;
  flex-wrap: wrap;
 
+}
+
+
+.cards {
+ background-color: #f0f0f0;
+ display: flex;
+ flex-wrap: wrap;
+
+}
+
+.cards>.card {
+ width: 200px;
+ height: 249px;
 }

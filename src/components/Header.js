@@ -1,5 +1,8 @@
 //HEADER
+import { useState } from "react";
 const Header = () => {
+ const [loggingIn, useLoggingIn] = useState('Login');
+
  return (
   <div className='header'>
    <div className='logo'>
@@ -12,6 +15,9 @@ const Header = () => {
      <li>About us</li>
      <li>Contact us</li>
      <li>Cart</li>
+     <button className="login" onClick={() => {
+      loggingIn === 'Login' ? useLoggingIn('Logout') : useLoggingIn('Login');
+     }}>{loggingIn}</button>
     </ul>
    </div>
 
