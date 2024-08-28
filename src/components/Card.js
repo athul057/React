@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 //CARD
 const Card = (props) => {
+ console.log("props are ", props);
  const { rest } = props;
 
  return (
