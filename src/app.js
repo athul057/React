@@ -20,9 +20,11 @@ const Body = () => {
   useEffect(() => {
     fetchData();
   }, [])
-
   const fetchData = async () => {
+
     const data = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=9.91850&lng=76.25580&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
+    console.log(data);
+
     const myData = await data.json();
 
 
@@ -38,23 +40,22 @@ const Body = () => {
 
 
   return (<>
-    <button onClick={() => {
+    <button className="filterBtn" onClick={() => {
       const myData = restData.filter((data) => {
         return (
           data.info.avgRating > 4.3
         )
       })
-      console.log(myData)
       useRestData(myData)
-    }}>Top Hotels</button>
+    }}>Top Hotels..</button>
     <input className='searchInput' type='text' value={searchItem} onChange={(e) => useSearchItem(e.target.value)} />
     <button onClick={() => {
 
       const filteredRes = restData.filter((data) => {
-        return data.info.name.includes(searchItem)
+        return data.info.name.toLowerCase().includes(searchItem.toLowerCase())
       })
-
       useTempData(filteredRes);
+
     }}>Search</button>
     <div className='body'>
       <Card rest={tempData} />
