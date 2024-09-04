@@ -1,91 +1,26 @@
-import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom/client'
-import Header from './components/Header';
-import Card from './components/Card';
-import Shimmer from './components/Shimmer'
-import rest from './utils/mock';
-import { useState } from 'react';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import About from './components/About';
-
-
-
-//BODY
-// const Body = () => {
-//  const [restData, useRestData] = useState([]);
-//  const [searchItem, useSearchItem] = useState('');
-//  const [tempData, useTempData] = useState([]);
-//  useEffect(() => {
-//   fetchData();
-//  }, [])
-
-//  const fetchData = async () => {
-//   const data = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=9.91850&lng=76.25580&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
-//   const myData = await data.json();
-
-//   //OPTIONAL CHAINING......
-//   useRestData(myData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-
-//  }
-
-//  if (restData.length === 0) {
-//   return <Shimmer />
-//  }
-
-
-
-//  return (<>
-//   <button className='filterBtn' onClick={() => {
-//    const myData = restData.filter((data) => {
-//     return (
-//      data.info.avgRating > 4.3
-//     )
-//    })
-//    console.log(myData)
-//    useRestData(myData)
-//   }}>Top Hotelss..</button>
-//   <input className='searchInput' type='text' value={searchItem} onChange={(e) => useSearchItem(e.target.value)} />
-//   <button onClick={() => {
-
-//    const filteredRes = restData.filter((data) => {
-//     return data.info.name.includes(searchItem)
-//    })
-
-//    useTempData(filteredRes);
-//   }}>Search</button>
-//   <div className='body'>
-//    <Card rest={tempData} />
-//   </div>
-//  </>
-//  )
-// }
-
-
-const Applayout = () => {
+const ItemList = ({ item }) => {
+ console.log(item);
+ const { name, price, ratings, imageId, description } = item.card.info;
  return (
-  <div className='app'>
-   <Header />
-   <Body />
+  <div className="pt-3">
+   <div className="flex justify-between">
+    <div className="w-6/12">
+     <div className="flex justify-between">
+      <h1 className="font-medium">{name}</h1>
+      <h1 className="font-medium">${price / 100}</h1>
+     </div>
+
+     <h1 className="pt-2">⭐{ratings.aggregatedRating.rating} </h1>
+     <div className="text-slate-500 pt-3">{description}</div>
+    </div>
+    <div className="relative w-3/12 ">
+     <img src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${imageId}`} className="rounded-lg object-cover" alt="img" />
+     <button className="absolute self-center bottom-0 right-1/3 text-green-700 bg-gray-100 px-4 py-1 rounded-lg text-center hover:bg-gray-200">Add +</button>
+    </div>
+   </div >
+
   </div>
+
  )
 }
-
-
-const appRouter = createBrowserRouter([
- {
-  path: "/",
-  element: <Applayout />,
- },
- {
-  path: "/about",
-  element: <About />,
- },
-]);
-
-
-
-
-const main = ReactDOM.createRoot(document.getElementById('root'));
-main.render(<Applayout />);
-
-
+export default ItemList;
