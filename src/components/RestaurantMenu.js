@@ -10,6 +10,8 @@ const ResMenu = () => {
 
  const { resId } = useParams();
  const resInfo = useResmenu(resId);
+ const [showItems, setShowItems] = useState(null);
+ const [listed, setListed] = useState(false);
 
 
  if (resInfo === null) {
@@ -50,9 +52,14 @@ const ResMenu = () => {
     <div className="w-9/12 mx-auto">
      {
 
-      catergories.map((category) => {
+      catergories.map((category, index) => {
        return (
-        <RestaurantCategory category={category} />
+        <RestaurantCategory category={category}
+         setShowItems={() => setShowItems(index)
+         }
+         listMake={showItems === index}
+
+        />
 
        )
       })
