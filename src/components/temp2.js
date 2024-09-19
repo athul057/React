@@ -1,31 +1,46 @@
-import { useState } from "react";
-import ItemList from "./ItemList";
+import { useDispatch, useSelector } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 
-const RestaurantCategory = ({ category }) => {
 
- const [show, setShow] = useState(false);
+const ItemList = ({ itemCards }) => {
 
- const { title, itemCards } = category.card.card
+ const dispatch = useDispatch();
+ const hadnleClick = (item) => {
+  dispatch(addItem(item));
+ }
 
- return (<div>
-  <div className="w-full mx-auto shadow-lg bg-zinc-100 my-4 p-2">
-   <div className="flex justify-between " onClick={() => { setShow(!show) }}>
-    <h1 className="text-lg font-semibold">{title} ({category.card.card.itemCards.length})</h1><span>🔽</span>
+
+ return (
+
+  itemCards.map((item, id) => {
+   const { name, price, ratings, imageId, description } = item.card.info;
+   return (<div className="py-4">
+    <div className="pt-3">
+     <div className="flex justify-between">
+      <div className="w-6/12">
+       <div className="flex justify-between">
+        <h1 className="font-medium">{name}</h1>
+        <h1 className="font-medium">${price / 100}</h1>
+       </div>
+
+       <h1 className="pt-2">⭐{ratings.aggregatedRating.rating} </h1>
+       <div className="text-slate-500 pt-3">{description}</div>
+      </div>
+      <div className="relative w-3/12 ">
+       <img src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${imageId}`} className="rounded-lg object-cover" alt="img" />
+       <button className="absolute self-center bottom-0 right-1/3 text-green-700 bg-gray-100 px-4 py-1 rounded-lg text-center hover:bg-gray-200" onClick={() => hadnleClick(item)}>Add +</button>
+      </div>
+     </div >
+
+    </div>
+    {id != itemCards.length - 1 ? <hr className="border-t border-gray-300 my-4 w-11/12 mx-auto" /> : ""}
    </div>
-   {
-    itemCards.map((item, id) => {
-     return (<div>
-      <ItemList item={item} />
-      {id != itemCards.length - 1 ? <hr className="border-t border-gray-300 my-4 w-11/12 mx-auto" /> : ""}
 
-     </div>)
-    })
-   }
-
-  </div>
-
- </div>)
-
+   )
+  })
+ )
 }
 
-export default RestaurantCategory;
+
+
+export default ItemList;

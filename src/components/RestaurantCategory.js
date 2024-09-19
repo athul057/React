@@ -2,7 +2,10 @@ import { useState } from "react";
 import ItemList from "./ItemList";
 
 
+
+
 const RestaurantCategory = ({ category, setShowItems, listMake }) => {
+
 
  const [showFull, setShowFull] = useState(false);
  const hadnleClick = () => {

@@ -6,14 +6,18 @@ import Error from './components/Error';
 import Contact from './components/Contact';
 import Body from './components/Body';
 import RestaurantMenu from './components/RestaurantMenu';
-import UserContext from './components/UserContext';
+import UserContext from './utils/UserContext';
 import { Provider } from 'react-redux';
 import appStore from './utils/appStore';
+import Cart from './components/Cart';
 
 // Lazy loading for the About component
 const About = lazy(() => import('./components/About'));
 
 const AppLayout = () => {
+
+
+
   const [userName, setUserName] = useState();
 
   useEffect(() => {
@@ -27,9 +31,9 @@ const AppLayout = () => {
     <Provider store={appStore}>
       <UserContext.Provider value={{ logInUser: "athul", setUserName }}>
         <div className='app'>
-          <UserContext.Provider value={{ logInUser: "ali", setUserName }}>
-            <Header />
-          </UserContext.Provider>
+
+          <Header />
+
           <Outlet />
         </div>
       </UserContext.Provider>
@@ -64,6 +68,10 @@ const appRouter = createBrowserRouter([
         path: '/ressingle/:resId',
         element: <RestaurantMenu />,
       },
+      {
+        path: '/cart',
+        element: <Cart />
+      }
     ],
     errorElement: <Error />,
   },

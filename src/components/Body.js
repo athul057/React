@@ -3,7 +3,7 @@ import Card from './Card';
 import Shimmer from './Shimmer'
 import { Link } from 'react-router-dom';
 import useOnlineStatus from '../utils/useOnlineStatus';
-import UserContext from "./UserContext";
+import UserContext from "../utils/UserContext";
 
 
 //BODY
@@ -14,12 +14,11 @@ const Body = () => {
   const status = useOnlineStatus();
 
   const data = useContext(UserContext);
-  console.log(data);
+
 
 
 
   useEffect(() => {
-    console.log("second");
     fetchData();
   }, [])
   const fetchData = async () => {
@@ -33,8 +32,8 @@ const Body = () => {
 
 
     //OPTIONAL CHAINING......
-    useRestData(myData?.data?.cards?.[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    useTempData(myData?.data?.cards?.[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    useRestData(myData?.data?.cards?.[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    useTempData(myData?.data?.cards?.[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
 
 
   }
@@ -61,7 +60,7 @@ const Body = () => {
       <button className='ml-4 bg-pink-300 px-6 text-base font-medium rounded-md hover:bg-pink-400' onClick={() => {
         //INPUT FIELD FOR CHANGING THE USER NAME............................................................................
 
-        <input type='text' value={login} />
+
 
         const filteredRes = restData.filter((data) => {
           return data.info.name.toLowerCase().includes(searchItem.toLowerCase())
